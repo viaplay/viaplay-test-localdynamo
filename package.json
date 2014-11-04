@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha --reporter spec --colors --recursive tests/unit && mocha --reporter spec --colors --recursive tests/function",
     "test-unit": "mocha --reporter spec --colors --recursive tests/unit",
-    "test-function": "mocha --reporter spec --colors --recursive tests/function"
+    "test-function": "mocha --reporter spec --colors --recursive tests/function",
+    "postinstall": "tar -xzf dynamodb_local_2014-10-07.tar.gz -C ./dynamodb_local_2014-10-07/"
   },
   "repository": {
     "type": "git",
