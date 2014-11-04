@@ -1,0 +1,25 @@
+{
+  "name": "viaplay-test-localdynamo",
+  "version": "0.0.7",
+  "description": "module for unit & function-tests against dynamodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec --colors --recursive tests/unit && mocha --reporter spec --colors --recursive tests/function",
+    "test-unit": "mocha --reporter spec --colors --recursive tests/unit",
+    "test-function": "mocha --reporter spec --colors --recursive tests/function"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git@git.viaplay.tv/scm/vp_mod/viaplay-test-localdynamo.git"
+  },
+  "postinstall": "",
+  "author": "Joakim J. Rapp",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "~2.0.23"
+  },
+  "devDependencies": {
+    "temp-simple-ioc": "3.0.9",
+    "mocha": "2.0.1"
+  }
+}
