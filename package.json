@@ -18,8 +18,9 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "2.1.36",
-    "mocha": "^2.2.5",
-    "simple-ioc": "^3.0.24"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "mocha": "2.2.5",
+    "simple-ioc": "3.0.24"
+  }
 }
