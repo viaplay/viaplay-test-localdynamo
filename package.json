@@ -7,7 +7,7 @@
     "test": "mocha --reporter spec --colors --recursive tests/unit && mocha --reporter spec --colors --recursive tests/function",
     "test-unit": "mocha --reporter spec --colors --recursive tests/unit",
     "test-function": "mocha --reporter spec --colors --recursive tests/function",
-    "postinstall": "tar -xzf dynamodb_local_2014-10-07.tar.gz -C ./dynamodb_local_2014-10-07/"
+    "postinstall": "tar -xzf dynamodb_local_2015-04-27_1.0.tar.gz -C ./dynamodb_local/"
   },
   "repository": {
     "type": "git",
@@ -17,10 +17,9 @@
   "author": "Joakim J. Rapp",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "~2.0.23"
+    "aws-sdk": "2.1.36",
+    "mocha": "^2.2.5",
+    "simple-ioc": "^3.0.24"
   },
-  "devDependencies": {
-    "temp-simple-ioc": "3.0.9",
-    "mocha": "2.0.1"
-  }
+  "devDependencies": {}
 }

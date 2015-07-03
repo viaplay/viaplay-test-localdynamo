@@ -1,6 +1,6 @@
 var assert = require( 'assert' );
 describe( 'Module test', function() {
-	var container = require( 'temp-simple-ioc' )
+	var container = require( 'simple-ioc' )
 		.getContainer();
 	before( function( callback ) {
 		container
