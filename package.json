@@ -1,12 +1,10 @@
 {
   "name": "viaplay-test-localdynamo",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "module for unit & function-tests against dynamodb",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec --colors --recursive tests/unit && mocha --reporter spec --colors --recursive tests/function",
-    "test-unit": "mocha --reporter spec --colors --recursive tests/unit",
-    "test-function": "mocha --reporter spec --colors --recursive tests/function",
+    "test": "mocha --reporter spec --colors --recursive tests/unit",
     "postinstall": "tar -xzf dynamodb_local_2015-04-27_1.0.tar.gz -C ./dynamodb_local/"
   },
   "repository": {
@@ -20,7 +18,6 @@
     "aws-sdk": "2.1.36"
   },
   "devDependencies": {
-    "mocha": "2.2.5",
-    "simple-ioc": "3.0.24"
+    "mocha": "2.2.5"
   }
 }
