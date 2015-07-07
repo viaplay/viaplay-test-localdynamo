@@ -5,9 +5,9 @@ var aws = require( 'aws-sdk' ),
 module.exports = function() {
 	var start = function( port, callback ) {
 		var child = spawn( 'java', [
-			'-Djava.library.path=' + path.resolve( __dirname, '../dynamodb_local/DynamoDBLocal_lib' ),
+			'-Djava.library.path=' + path.resolve( __dirname, './dynamodb_local/DynamoDBLocal_lib' ),
 			'-jar',
-			path.resolve( __dirname, '../dynamodb_local/DynamoDBLocal.jar' ),
+			path.resolve( __dirname, './dynamodb_local/DynamoDBLocal.jar' ),
 			'-inMemory',
 			'-port',
 			port.toString()
