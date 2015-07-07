@@ -1,4 +1,7 @@
-var aws = require( 'aws-sdk' );
+var aws = require( 'aws-sdk' ),
+	spawn = require( 'child_process' ).spawn,
+	net = require( 'net' ),
+	path = require( 'path' );
 module.exports = function() {
 	var start = function( port, callback ) {
 		var child = spawn( 'java', [
@@ -13,7 +16,7 @@ module.exports = function() {
 		process.on( 'SIGINT', function() { process.exit(); } );
 		( function connect() {
 			net
-				.connect( { port: settings.port }, function() {
+				.connect( { port: port }, function() {
 					this.end();
 					callback();
 				} )
@@ -26,7 +29,7 @@ module.exports = function() {
 		start( port, function() {
 			aws.config.update( {
 				sslEnabled: false,
-				endpoint: 'localhost:' + settings.port.toString(),
+				endpoint: 'localhost:' + port.toString(),
 				accessKeyId: 'xxx',
 				secretAccessKey: 'xxx',
 				region: 'xxx'
