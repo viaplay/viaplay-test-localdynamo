@@ -1,6 +1,6 @@
 {
   "name": "viaplay-test-localdynamo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "module for unit & function-tests against dynamodb",
   "main": "index.js",
   "scripts": {
